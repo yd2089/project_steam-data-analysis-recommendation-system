@@ -14,6 +14,7 @@ The project is organized into several Jupyter notebooks, each focusing on differ
 
 ### 🔍 Exploratory Data Analysis & Classification
 - **`[EDA+Classification & Prediction]Steam_Data_Project_cleaning.ipynb`** - Comprehensive EDA, data cleaning, and classification analysis using PySpark
+- **`[Classification & Prediction]SteamData_Model.ipynb`** - Advanced machine learning models including Random Forest classification and Neural Network regression for CCU prediction
 
 ### 🧠 Natural Language Processing
 - **`[Named Entity Recognition & Word Cloud]Steam_Reviews_NER_WordCloud.ipynb`** - NER analysis and word cloud generation for Steam reviews
@@ -37,9 +38,13 @@ The project is organized into several Jupyter notebooks, each focusing on differ
 - **Feature Engineering**: Created derived features like positive ratios and review categories
 - **Outlier Detection**: Identified and managed outliers using statistical methods
 
-### 3. Exploratory Data Analysis
+### 3. Exploratory Data Analysis & Machine Learning
 - **Game Classification**: Categorized games by concurrent user levels (low, medium-low, medium-high, high, very high)
 - **Sentiment Analysis**: Analyzed review sentiment patterns across different game categories
+- **Advanced ML Models**: Implemented Random Forest classification and Neural Network regression
+- **CCU Prediction**: Built models to predict concurrent user counts with 78.8% R² score
+- **Cross-Validation**: Performed 10-fold cross-validation to ensure model robustness
+- **Hyperparameter Tuning**: Used Keras Tuner for optimal neural network architecture
 - **Visualization**: Created comprehensive visualizations for data distribution and patterns
 - **Statistical Analysis**: Performed detailed statistical analysis on game metrics
 
@@ -63,6 +68,10 @@ The project is organized into several Jupyter notebooks, each focusing on differ
 - **Google Cloud Platform (GCP)** - Cloud storage and computing
 - **Spark NLP** - Natural language processing
 - **Scikit-learn** - Machine learning algorithms
+- **TensorFlow/Keras** - Deep learning and neural networks
+- **XGBoost** - Gradient boosting framework
+- **Keras Tuner** - Hyperparameter optimization
+- **Imbalanced-learn** - Handling class imbalance
 - **Matplotlib/Seaborn** - Data visualization
 - **Pandas** - Data manipulation
 - **NLTK** - Natural language toolkit
@@ -77,8 +86,11 @@ The project is organized into several Jupyter notebooks, each focusing on differ
 
 ## Key Findings
 
-### Game Classification
+### Game Classification & Prediction
 - Successfully categorized games into 5 concurrent user level categories
+- **Random Forest Classification**: Achieved 81.4% accuracy for paid games and 76.7% for free games
+- **Neural Network Regression**: Achieved 78.8% R² score for CCU prediction
+- **Cross-Validation**: Validated model robustness with 10-fold cross-validation
 - Identified patterns in game popularity based on various features
 - Analyzed differences between free and paid games
 
@@ -116,6 +128,18 @@ The project is organized into several Jupyter notebooks, each focusing on differ
 - Update bucket paths in notebooks as needed
 
 ## Model Performance
+
+### Classification Models
+- **Random Forest (Paid Games)**: 81.4% accuracy, 88% F1-score
+- **Random Forest (Free Games)**: 76.7% accuracy, 83% F1-score
+- **Cross-Validation**: Consistent performance across 10 folds
+- **Class Imbalance Handling**: Implemented weighted sampling
+
+### Regression Models
+- **Neural Network (CCU Prediction)**: 78.8% R² score
+- **Hyperparameter Tuning**: Optimized using Keras Tuner
+- **Architecture**: 3-layer neural network with dropout and batch normalization
+- **Cross-Validation**: 10-fold validation with best model selection
 
 ### Sentiment Analysis Model
 - **Accuracy**: 86.09%
